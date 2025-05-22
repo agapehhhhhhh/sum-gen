@@ -1,9 +1,9 @@
+# main.py
 from fastapi import FastAPI, Body
 from transformers import pipeline
 
 app = FastAPI()
 
-# Load summarization model (ringan)
 summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
 
 @app.post("/summarize")
